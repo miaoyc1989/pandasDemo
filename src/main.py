@@ -8,6 +8,12 @@ Create date  : 2021/9/18 10:54 下午
 Description  : 
 """
 
+import pandas as pd
+
+
+def get_data_from_xls(file_path):
+    return pd.read_excel(file_path)
+
 
 def get_data(file_path):
     """
@@ -22,4 +28,4 @@ def get_data(file_path):
 
 if __name__ == "__main__":
     test_data_file = "../data/test1.xlsx"
-    print(get_data(file_path=test_data_file))
+    print(get_data_from_xls(file_path=test_data_file))
