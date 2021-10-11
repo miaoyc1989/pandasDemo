@@ -28,4 +28,8 @@ def get_data(file_path):
 
 if __name__ == "__main__":
     test_data_file = "../data/test1.xlsx"
-    print(get_data_from_xls(file_path=test_data_file))
+    data = get_data_from_xls(file_path=test_data_file)
+    print(type(data))
+    print(data.colums)
+    res = data.groupby('key').quantile()
+    print(res)
